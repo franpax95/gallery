@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Antic+Slab&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Antic Slab', serif;
+}
+
+html, body, #root{
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    background-color: #262626;
+}
+
+.App{
+    min-height: 100vh;
+    min-width: 95vw;
+    max-width: 100vw;
+    width: 100%;
+    height: 100%;
+
+    overflow-x: hidden;
+
+    /* background-color: #262626; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    transition: filter 1s, transform .3s;
+}
+.App::-webkit-scrollbar { width: 0px; }
+.App::-webkit-scrollbar-track { background: #666666; }/* Track */
+.App::-webkit-scrollbar-thumb { background: #262626; }/* Handle */
+.App::-webkit-scrollbar-thumb:hover { background: rgba(0, 0, 0, .5);  }/* Handle on hover */
+
+
+
+.ImageCard{
+    position: relative;
+
+    cursor: pointer;
+
+    background-position: center center;
+    background-size: cover;
+}
+
+
+.ImageCard .title{
+    width: 100%;
+    padding: 10px 20px;
+
+    position: absolute;
+    bottom: 0;
+
+    color: white;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .ImageCard{
+        width: 100%;
+        height: 400px;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .ImageCard{
+        width: 50%;
+        height: 300px;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .ImageCard{
+        width: 33.33%;
+        /* height: 300px; */
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+/* @media only screen and (min-width: 992px) {
+    .ImageCard{
+        width: 25%;
+        height: 300px;
+    }
+} */
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .ImageCard{
+        width: 25%;
+        /* height: 300px; */
+    }
+}

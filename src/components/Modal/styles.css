@@ -1,0 +1,102 @@
+.Modal{
+    z-index: 500;
+    width: 100%;
+    height: 100%;
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: transparent;
+}
+
+.Modal .content{
+    max-height: 80vh;
+    max-width: 80vw;
+    position: relative; 
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+
+    background-color: #262626;
+    -webkit-box-shadow: 0px 0px 15px 0px rgba(38,38,38,1);
+    -moz-box-shadow: 0px 0px 15px 0px rgba(38,38,38,1);
+    box-shadow: 0px 0px 15px 0px rgba(38,38,38,1);
+}
+
+.Modal .content .img{
+    width: 100%;
+    height: 100%;
+}
+
+.Modal .content .img img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.Modal .content .close,
+.Modal .content .left,
+.Modal .content .right {
+    z-index: 1000;
+
+    position: absolute;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background: transparent;
+
+    color: darkgray;
+
+    font-size: 36px;
+    font-weight: lighter;
+
+    transition: opacity .8s, color .5s;
+}
+
+.Modal .content .close:hover,
+.Modal .content .left:hover,
+.Modal .content .right:hover {
+    color: lightgray;
+}
+
+.Modal .content .close{
+    top: 15px;
+    right: 15px;
+}
+
+.Modal .content .left{
+    height: 80px;
+    left: 15px;
+}
+.Modal .content .right{
+    height: 80px;
+    right: 15px;
+}
+
+.Modal .content .info{
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+
+    color: white;
+}
+.Modal .content .info a{
+    color: white;
+    transition: color .5s;
+}
+.Modal .content .info a:hover{
+    color: darkgray;
+}
