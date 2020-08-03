@@ -100,3 +100,8 @@
 .Modal .content .info a:hover{
     color: darkgray;
 }
+
+.Modal .content .info .title{
+    text-transform: uppercase;
+    font-weight: 500;
+}
