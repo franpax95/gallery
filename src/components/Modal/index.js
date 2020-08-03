@@ -11,10 +11,6 @@ import { MdClose } from 'react-icons/md';
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from 'react-icons/ai';
 
 
-const calcGreater = (x, y) => {
-    if(x > y)   return true;
-    else        return false;
-}
 
 const delay = (t) => {
     return new Promise((resolve, reject) => {
@@ -32,9 +28,6 @@ const loadImage = url => {
         img.src = `/images/${url}.jpg`;
     });
 }
-
-
-
 
 
 
@@ -69,22 +62,6 @@ const Modal = ({
         setLoading(true);
         fetchData();
     }, [id]);
-
-    /** resize effect */
-    // useEffect(() => {
-    //     let w = Math.abs(innerWidth - width);
-    //     let h = Math.abs(innerHeight - height);
-        
-    //     if(w > h){
-    //         const cw = innerWidth * 0.7;
-    //         setCurrentWidth(cw);
-    //         setCurrentHeight(cw * height/width);
-    //     }else{
-    //         const ch = innerHeight * 0.7;
-    //         setCurrentHeight(ch);
-    //         setCurrentWidth(ch * width/height);
-    //     }
-    // }, [width, height, innerWidth, innerHeight]);
 
     /** resize effect */
     useEffect(() => {
